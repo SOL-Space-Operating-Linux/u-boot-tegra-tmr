@@ -255,7 +255,7 @@ static int __abortboot(int bootdelay)
 }
 # endif	/* CONFIG_AUTOBOOT_KEYED */
 
-static int abortboot(int bootdelay)
+int abortboot(int bootdelay)
 {
 	int abort = 0;
 

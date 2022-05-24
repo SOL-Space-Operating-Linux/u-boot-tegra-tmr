@@ -24,6 +24,8 @@
  */
 const char *bootdelay_process(void);
 
+int abortboot(int bootdelay);
+
 /**
  * autoboot_command() - run the autoboot command
  *
@@ -37,6 +39,11 @@ void autoboot_command(const char *cmd);
 static inline const char *bootdelay_process(void)
 {
 	return NULL;
+}
+
+static inline int abortboot(int bootdelay)
+{
+	return 0;
 }
 
 static inline void autoboot_command(const char *s)
