@@ -35,6 +35,10 @@
 		"root=/dev/mmcblk${mmcdev}p${mmcpart} rw rootwait\0" \
 	"mmc_mmc_fit=run mmcloadfit;run mmcargs; bootm ${fit_addr} - ${fdt_addr}\0"
 
+/* Custom Commands */
+#define CONFIG_CMD_TMR
+#define CONFIG_CMD_MD5SUM
+
 #define BOARD_EXTRA_ENV_SETTINGS \
 	FITIMAGE_ENV_SETTINGS
 
